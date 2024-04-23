@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "author": "",
+  "author": "AdrianoDonini <2003donini@gmail.com>",
   "license": "ISC",
   "scripts": {
     "dev": "ts-node-dev src/server.ts"
@@ -26,5 +26,6 @@
     "jsonwebtoken": "^9.0.2",
     "prisma": "^5.10.2",
     "yarn": "^1.22.21"
-  }
+  },
+  "repository": "https://github.com/AdrianoDonini/deveServe.git"
 }
