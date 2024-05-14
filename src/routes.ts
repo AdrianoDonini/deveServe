@@ -13,8 +13,15 @@ import { CreateOrderController } from './controllers/order/CreateOrderController
 import { DeleteOrderController } from './controllers/order/DeleteOrderController';
 import AddItemController from './controllers/order/AddItemController';
 import SendOrderController from './controllers/order/SendOrderController';
+import DeleteItemOrderController from './controllers/order/DeleteItemOrderController';
+import ListOrderNoFinishedController from './controllers/order/ListOrderNoFinishedController';
+import ListOrderFinishedController from './controllers/order/ListOrderFinishedController';
+import FinisheOrderController from './controllers/order/FinisheOrderController';
+
 
 import upLoadConfig from './config/multer';
+import CloseOrderController from './controllers/order/CloseOrderController';
+
 const upLoad = multer(upLoadConfig.upload('./tmp'));
 
 const router = Router();
@@ -30,7 +37,11 @@ router.post('/createOrder', isAuthenticated, new CreateOrderController().handle)
 router.delete('/deleteOrder', isAuthenticated, new DeleteOrderController().handle);
 router.post('/addItem', isAuthenticated, new AddItemController().handle);
 router.put('/sendOrder', isAuthenticated, new SendOrderController().handle);
-
+router.delete('/deleteItemOrder', isAuthenticated, new DeleteItemOrderController().handle);
+router.get('/listOrderNoFinished', isAuthenticated, new ListOrderNoFinishedController().handle);
+router.get('/listOrderFinished', isAuthenticated, new ListOrderFinishedController().handle);
+router.put('/finisheOrder', isAuthenticated, new FinisheOrderController().handle);
+router.get('/closeOrder', isAuthenticated, new CloseOrderController().handle);
 export{router};
 
 

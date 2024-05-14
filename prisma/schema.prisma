@@ -77,4 +77,9 @@ model Item{
   id_produto String
 }
 
+generator Item {
+  provider        = "prisma-client-js"
+  previewFeatures = ["relationJoins"]
+}
+
 
