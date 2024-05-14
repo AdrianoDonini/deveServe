@@ -11,10 +11,13 @@ export default class CloseOrderService {
             }
         })
         
-        let total;
+        let total = 0;
         itemsPedido.forEach(item => {
-            total += (item.quantidade * parseFloat(item.produto.preco));
+            let valor = parseFloat(item.produto.preco)
+            let quantidade = (item.quantidade)
+            total += (quantidade * valor);
         });
+        
         return {itemsPedido, total};
     }
 }

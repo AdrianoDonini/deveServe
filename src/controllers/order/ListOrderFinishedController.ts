@@ -3,10 +3,11 @@ import ListOrderFinishedService from "../../services/order/ListOrderFinishedServ
 
 export default class ListOrderFinishedController {
     async handle(req:Request, res:Response){
+        const data = req.query.dataPedido as string;
         const listOrderFinishedService = new ListOrderFinishedService();
 
-        const pedidos = await listOrderFinishedService.execute();
+        const pedidos = await listOrderFinishedService.execute(data);
 
-        return res.json(pedidos);
+        return res.json({pedidos});
     }
 }
