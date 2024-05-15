@@ -7,7 +7,7 @@ export default class ListOrderFinishedController {
         const listOrderFinishedService = new ListOrderFinishedService();
 
         const pedidos = await listOrderFinishedService.execute(data);
-
-        return res.json({pedidos});
-    }
+        
+        return res.json({pedidos}    
+    );}
 }

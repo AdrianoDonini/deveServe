@@ -13,9 +13,9 @@ export default class ListOrderNoFinishedService{
                 }
             }
         });
-        console.log(data);
+        console.log(new Date(data));
         
-        
+        //date = new Date((new Date().getTime())-(new Date().getTimezoneOffset()*60*1000)).toISOString().substring(0,10);
         return pedidos ;
     }
 }
