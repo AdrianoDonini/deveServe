@@ -11,8 +11,10 @@ export default class SendOrderService{
                 id:order_id
             },
             data:{
-                rascunho:false
+                rascunho:false,
+                atualizado_em: new Date()
             }
+
         })
         return order;
     }

@@ -17,6 +17,7 @@ import DeleteItemOrderController from './controllers/order/DeleteItemOrderContro
 import ListOrderNoFinishedController from './controllers/order/ListOrderNoFinishedController';
 import ListOrderFinishedController from './controllers/order/ListOrderFinishedController';
 import FinisheOrderController from './controllers/order/FinisheOrderController';
+import ListAllOrdesController from './controllers/order/ListAllOrdesController';
 
 
 import upLoadConfig from './config/multer';
@@ -42,6 +43,7 @@ router.get('/listOrderNoFinished', isAuthenticated, new ListOrderNoFinishedContr
 router.get('/listOrderFinished', isAuthenticated, new ListOrderFinishedController().handle);
 router.put('/finisheOrder', isAuthenticated, new FinisheOrderController().handle);
 router.get('/closeOrder', isAuthenticated, new CloseOrderController().handle);
+router.get('/listAllOrders', isAuthenticated, new ListAllOrdesController().handle);
 export{router};
 
 

@@ -14,7 +14,7 @@ export default class ListOrderNoFinishedService{
                 status: false,
                 criado_em:{
                     gte: new Date(data),
-                    lte :date
+                    lt :date
                 }
             }
         });

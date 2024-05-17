@@ -14,7 +14,7 @@ export default class ListOrderFinishedService{
                 status: true,
                 atualizado_em:{
                     gte: new Date(data),
-                    lte: date
+                    lt: date
                 }
             }
         });
