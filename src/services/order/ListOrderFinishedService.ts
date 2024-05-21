@@ -18,6 +18,10 @@ export default class ListOrderFinishedService{
                 }
             }
         });
+
+        if(pedidos[0] == null){
+            throw new Error("Não temos pedidos registrados para esse dia informado!");
+        }
         console.log(data);
         
         
